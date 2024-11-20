@@ -1,0 +1,53 @@
+.register-card-logo {
+  max-height: 40%;
+  max-width: 40%;
+}
+
+.card {
+  margin-left: 2.5vw;
+}
+
+
+
+textarea{
+  min-height:25rem;
+  min-width: 40rem;
+  background-color: rgb(40, 35, 55, 0.2);
+  font-size: 12pt;
+  color: white;
+}
+
+textarea:focus{
+  outline: none;
+}
+
+.imagine-sticker{
+  height: 6rem;
+  width: auto;
+  margin-right:2rem;
+}
+
+.card-title{
+  font-size: 36pt;
+  color: white;
+}
+
+.card-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin:4rem;
+}
+
+.card-body{
+  margin:3rem;
+}
+
+.contact{
+  color: white;
+  font-size: 12pt;
+}
+
+.contacte{
+  margin:3rem;
+}

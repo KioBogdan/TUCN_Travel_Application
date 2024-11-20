@@ -1,0 +1,156 @@
+/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+@import "bootstrap";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.background {
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-image: url('../src/assets/background.jpg');
+  justify-content: center;
+}
+
+.menu {
+  background-color: rgb(40, 35, 55, 0.8);
+  height: 54px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-weight: 900;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 3rem;
+    height: auto;
+    margin-left: 8rem;
+    margin-right: 2rem;
+    border-radius: 80%;
+  }
+}
+
+.menu-items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-item {
+  color: white;
+  margin-right: 2rem;
+  font-weight: 9000;
+  cursor: pointer;
+}
+
+.avatar {
+  display: flex;
+  width: 160px;
+  height: 44px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: none;
+
+}
+
+.show {
+  display: block;
+  flex-direction: column;
+  margin-top: 3rem;
+  margin-left: -1.6rem;
+  color: white;
+  font-size: medium;
+  background-color: rgb(40, 35, 55, 0.8);
+  border-radius: 5px;
+  height: fit-content;
+  position: fixed;
+  z-index: 10;
+}
+
+.show-offers {
+  display: block;
+  flex-direction: column;
+  color: white;
+  font-size: medium;
+  background-color: rgb(40, 35, 55, 0.8);
+  border-radius: 5px;
+  height: fit-content;
+  position: fixed;
+  z-index: 10;
+  margin-top: 0.5rem;
+  margin-left: 5rem;
+}
+
+.dropdown-option {
+  //padding: 0.3rem;
+  margin-top: initial;
+}
+
+.search-input {
+  display: flex;
+  flex-direction: row;
+  margin: 0.5rem;
+  align-items: center;
+
+  .search-text {
+    margin-right: 1rem !important;
+    color: black;
+  }
+}
+
+.card {
+  border-radius: 1rem;
+  background-color: rgb(228, 165, 216,0.4);
+  position: relative;
+  max-width: 50vw;
+  max-height: 90vh;
+}
+
+.card-body {
+  font-family: 'Poppins', sans-serif;
+  max-height: 80%;
+}
+
+.div-centrat{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  width: 10rem;
+  min-width: fit-content;
+  height: 3rem;
+  border-radius: 3rem;
+  background-color: rgb(40, 35, 55, 0.8);
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 0.5s;
+  margin: 2rem;
+}
+
+.btn:hover {
+  background-color: rgb(40, 35, 55, 0.6);
+  color: white;
+  border: none;
+  outline: none;
+}

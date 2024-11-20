@@ -1,0 +1,35 @@
+<div class="movie-card">
+  <img src="{{imagine}}">
+  <div class="movie-stuff">
+    <div class="destination-header">
+      <div class="hotelTitle">{{destination.name}}</div>
+      <div class="movie-characteristic imagine-locatie">
+        <img src="assets/location.png">
+        {{destination.location}}
+      </div>
+    </div>
+    <div class="movie-characteristic">
+      <div>
+        Descrierea:
+      </div>
+      <div class="description-text">
+        {{destination.description}}
+      </div>
+    </div>
+    <div class="movie-characteristic">
+      Pret per noapte: {{destination.pricePerNight}}
+    </div>
+    <div class="movie-characteristic">
+      Locuri disponibile:
+      {{destination.availableSeats}}
+    </div>
+    <div *ngIf="destination.discount!=0" class="movie-characteristic">
+      Reducere:
+      {{destination.discount}}%
+    </div>
+    <div class="div-centrat">
+      <input type="submit" class="btn" value="REZERVA ACUM">
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,38 @@
+<div class="menu">
+  <div class="logo">
+    <img src="assets/logo.webp">
+    Kio Travel
+  </div>
+  <div class="menu-items">
+    <div *ngFor="let item of menuItems" class="menu-item" (click)="redirect(item)">
+      <ng-container>
+        {{item}}
+      </ng-container>
+    </div>
+    <div *ngIf="menuItems.includes('DESTINATIONS')" class="dropdown" (click)="goToOffers()">
+      <div class="menu-item">DESTINATIONS</div>
+      <div class="dropdown-content" id="offersDropdown">
+        <div class="dropdown-option" (click)="goToSpecificOffers()">Oferta1</div>
+        <div class="dropdown-option" (click)="goToSpecificOffers()">Oferta2</div>
+      </div>
+    </div>
+  </div>
+  <form class="search-input">
+    <input class="search-text">
+    <button [textContent]="'Search'" class="btn butonas"></button>
+  </form>
+  <div class="avatar dropdown" (click)="toggleDropdown()">
+    <img src="assets/man.png">
+    <div class="dropdown-content" id="myDropdown">
+      <div class="dropdown-option">Login</div>
+      <div class="dropdown-option">Register</div>
+    </div>
+  </div>
+</div>
+<div class="background main-text">
+  <div class="travel-app-text">
+    <div>
+      Join and let's explore the world together!
+    </div>
+  </div>
+</div>

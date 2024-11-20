@@ -1,0 +1,61 @@
+<div class="menu">
+  <div class="logo">
+    <img src="assets/logo.webp">
+    Kio Travel
+  </div>
+  <div class="menu-items">
+    <div *ngFor="let item of menuItems" class="menu-item" (click)="redirect(item)">
+      <ng-container>
+        {{item}}
+        <div *ngIf="item === 'DESTINATII'" class="submenu">
+          <div class="dropdown-content" id="offersDropdown">
+            <div class="dropdown-option">Oferta1</div>
+            <div class="dropdown-option">Oferta2</div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <form class="search-input">
+    <input class="search-text">
+    <button [textContent]="'Search'" class="btn butonas"></button>
+  </form>
+  <div class="avatar dropdown" (click)="toggleDropdown()">
+    <img src="assets/man.png">
+    <div class="dropdown-content" id="myDropdown" style="margin-top: initial;">
+      <div class="dropdown-option">Login</div>
+      <div class="dropdown-option">Register</div>
+    </div>
+  </div>
+</div>
+<div class="background total">
+  <div class="filtre">
+    <h6 class="filtru-text"> Inceput sejur</h6>
+    <input
+      type="date"
+      class="calendar"
+      placeholder="Alege"
+    />
+    <h6 class="filtru-text">Final sejur</h6>
+    <input
+      type="date"
+      class="calendar"
+      placeholder="Alege"
+    />
+  </div>
+
+  <div class="offers-check">
+    <input type="checkbox" id="optionalCheckbox" name="optionalCheckbox">
+    <label for="optionalCheckbox">Oferte</label>
+  </div>
+
+  <div class="destinations">
+    <div *ngFor="let destination of destinations">
+      <app-destination-card [destination]="destination">
+      </app-destination-card>
+    </div>
+  </div>
+</div>
+
+
+

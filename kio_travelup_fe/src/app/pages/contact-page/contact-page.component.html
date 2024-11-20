@@ -1,0 +1,59 @@
+<div class="menu">
+  <div class="logo">
+    <img src="assets/logo.webp">
+    Kio Travel
+  </div>
+  <div class="menu-items">
+    <div *ngFor="let item of menuItems" class="menu-item" (click)="redirect(item)">
+      <ng-container>
+        {{item}}
+      </ng-container>
+    </div>
+    <!--    <div *ngIf="menuItems.includes('DESTINATIONS') && !isAgent" class="dropdown" (click)="goToOffers()">-->
+    <!--      <div class="menu-item">DESTINATIONS</div>-->
+    <!--      <div class="dropdown-content" id="offersDropdown">-->
+    <!--        <div class="dropdown-option" (click)="goToSpecificOffers()">Maldive 90%</div>-->
+    <!--        <div class="dropdown-option" (click)="goToSpecificOffers()">Cartagena 40%</div>-->
+    <!--      </div>-->
+    <!--    </div>-->
+  </div>
+  <div class="avatar dropdown" (click)="toggleDropdown()">
+    <img src="assets/man.png">
+    <div class="dropdown-content" id="myDropdown">
+      <div class="dropdown-option">Login</div>
+      <div class="dropdown-option">Register</div>
+      <div class="dropdown-option">Logout</div>
+    </div>
+  </div>
+</div>
+<div class="background">
+  <div>
+<div class="card">
+  <div class="card-body m-4">
+    <div class="card-header">
+      <img src="assets/communication.png" class="imagine-sticker">
+       <div class="card-title">
+         PARERI...
+       </div>
+    </div>
+    <h4 class="d-flex me-1 ms-1 mt-3 justify-content-center card-title"></h4>
+    <div class="contacte">
+    <h6 class="div-centrat contact">Mail: kio.bogdan@gmail.com</h6>
+    <h6 class="div-centrat contact">Telefon:+40 729 821 007</h6>
+    </div>
+    <div class="div-centrat">
+      <form [formGroup]="form">
+          <textarea
+            class="d-flex mb-3"
+            formControlName="message">
+          </textarea>
+      </form>
+    </div>
+    <div class="div-centrat">
+        <input type="submit" class="btn" value="ANUNTA-NE">
+    </div>
+  </div>
+</div>
+  </div>
+
+
